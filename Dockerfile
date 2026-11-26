@@ -10,7 +10,7 @@ RUN apt-get update && \
 
 COPY package.json .
 
-RUN npm cache clean --force && npm install --no-package-lock && npm install -g qrcode-terminal
+RUN npm cache clean --force && npm install --registry=https://registry.npmjs.org/ && npm install -g qrcode-terminal
 
 COPY . .
 
